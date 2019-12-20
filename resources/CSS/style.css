@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffffff;
+    color: #707070;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.26), #000), url(CSSimg/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /*100% of viewport*/
+}
+
+.heroTextBox {
+    position: absolute; /*only the way we can vertically and horizontally center*/
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*To translate the element half og its width and height up and to the left*/
+}
+
+h1 {
+    margin-top: 0; /*to reduce the margin of h1*/
+    margin-bottom: 20px;
+    color: #ffffffd0;
+    font-size: 240%; /*means our heading element will be 40px which is exactly 200% of 40px, so when we change the font-size in the global(html), this will be flexible.*/
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.btn:link, 
+.btn:visited { /*pseudo-classes, :link in this case, means the 'a' element in its normal state and then have visited state*/
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none; /*get rid of the underline*/
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btnFull:link,
+.btnFull:visited {
+    background-color: #fd9644;  /*Use flatuicolor to choose color*/
+    border: 1px solid #fd9644;
+    margin-right: 20px;
+    color: #ecf0f1;
+}
+
+.btnGhost:link,
+.btnGhost:visited {
+    border: 1px solid #fd9644;
+    color: #fd9644;
+}
+
+
+.btn:hover,
+.btn:active {
+    background-color: #a7886f;
+}
+
+.btnFull:hover,
+.btnFull:active {
+    border: 1px solid #fd9644;
+}
+
+.btnGhost:hover,
+.btnGhost:active {
+    border: 1px solid #fd9644;
+}
