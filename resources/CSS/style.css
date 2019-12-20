@@ -1,3 +1,6 @@
+/*---------------------------------------------------------------------------*/
+/*BASIC SETUP*/
+/*---------------------------------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -13,25 +16,18 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+/*---------------------------------------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*---------------------------------------------------------------------------*/
+
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.26), #000), url(CSSimg/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /*100% of viewport*/
-}
-
-.heroTextBox {
-    position: absolute; /*only the way we can vertically and horizontally center*/
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /*To translate the element half og its width and height up and to the left*/
-}
+/*---------------------------------------------------------------------------*/
+/*HEADING*/
+/*---------------------------------------------------------------------------*/
 
 h1 {
     margin-top: 0; /*to reduce the margin of h1*/
@@ -43,6 +39,10 @@ h1 {
     letter-spacing: 1px;
     word-spacing: 4px;
 }
+
+/*---------------------------------------------------------------------------*/
+/*BUTTON*/
+/*---------------------------------------------------------------------------*/
 
 .btn:link, 
 .btn:visited { /*pseudo-classes, :link in this case, means the 'a' element in its normal state and then have visited state*/
@@ -68,7 +68,6 @@ h1 {
     color: #fd9644;
 }
 
-
 .btn:hover,
 .btn:active {
     background-color: #a7886f;
@@ -82,4 +81,56 @@ h1 {
 .btnGhost:hover,
 .btnGhost:active {
     border: 1px solid #fd9644;
+}
+
+/*---------------------------------------------------------------------------*/
+/*HEADER*/
+/*---------------------------------------------------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.26), #000), url(CSSimg/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /*100% of viewport*/
+}
+
+.heroTextBox {
+    position: absolute; /*only the way we can vertically and horizontally center*/
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*To translate the element half og its width and height up and to the left*/
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+}
+
+.mainNav {
+    margin-top: 30px;
+    float: right;
+    list-style: none;
+}
+
+.mainNav li { /*we select mainNav and all li element inside*/
+    display: inline; /*from block will be side by side*/
+    margin-left: 40px;
+}
+
+.mainNav li a:link,
+.mainNav li a:visited { /*manage a href*/
+    padding: 8px 0px;
+    color: #ffffffd0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 75%; /*always use % base on global (html) px to be able to adjust by itself*/
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+.mainNav li a:hover,
+.mainNav li a:active {
+    border-bottom: 2px solid #fd9644;
 }
