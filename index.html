@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="vendors/CSS/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendors/CSS/Grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/CSS/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="resources/CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <title>OmniFood</title>
@@ -12,9 +13,12 @@
 
 <body>
     <header>
-        <nav> <!--navigation-->
+        <nav>
+            <!--navigation-->
             <div class="row">
-                <img src="resources/images/logo-white.png" alt="Omni Food Logo" class="logo"> <!--give the class so we can format it-->
+                <!--use class "row" because we want it to be centered-->
+                <img src="resources/images/logo-white.png" alt="Omni Food Logo" class="logo">
+                <!--give the class so we can format it-->
                 <ul class="mainNav">
                     <li><a href="#">Food delivery</a></li>
                     <li><a href="#">How it works</a></li>
@@ -25,13 +29,51 @@
         </nav>
         <div class="heroTextBox">
             <h1>Goodbye junk food. <br>Hello super healthy meals.</h1>
-            <a class="btn btnFull" href="#">I’m hungry</a> <!--# dummy link which link to nowhere now-->
+            <a class="btn btnFull" href="#">I’m hungry</a>
+            <!--# dummy link which link to nowhere now-->
             <a class="btn btnGhost" href="#">Show me more</a>
         </div>
     </header>
 
+    <section class="sectionFeatures">
+        <div class="row">
+            <!--use class "row" because we want it to be centered-->
+            <h2>Get food fast &mdash; not fast food.</h2>
+            <!--&mdash; is larger dash, see more in html special characters or special entiles-->
+            <p class="longCopy">
+                Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for
+                cooking. So let us take care of that, we’re really good at it, we promise!
+            </p>
+        </div>
+        <div class="col span-1-of-4 box">
+            <!--use col class and span-1-of-4 according to theset up in Grid.css-->
+            <i class="ion-ios-infinite showIcon"></i>   <!--icon-->
+            <h3>Up to 365 days/year</h3>
+            <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You
+                can also choose to order more flexibly if that's your style.</p>
+        </div>
+        <div class="col span-1-of-4 box">
+            <i class="ion-ios-time showIcon"></i>
+            <h3>Ready in 20 minutes</h3>
+            <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home.
+                We work with the best chefs in each town to ensure that you're 100% happy.</p>
+        </div>
+        <div class="col span-1-of-4 box">
+            <i class="ion-leaf showIcon"></i>
+            <h3>100% organic</h3>
+            <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or
+                antibiotics. Good for your health, the environment, and it also tastes better!</p>
+        </div>
+        <div class="col span-1-of-4 box">
+            <i class="ion-android-cart showIcon"></i>
+            <h3>Order anything</h3>
+            <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose
+                from our menu containing over 100 delicious meals. It's up to you!</p>
+        </div>
+
+
+    </section>
+
 </body>
 
 </html>
-
-

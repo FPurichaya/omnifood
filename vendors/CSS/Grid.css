@@ -112,7 +112,7 @@
 }
 
 .span-1-of-4 {
-	width: 23.8%; 
+	width: 23.3%; /*initial setup is 23.8 but doesn't work on my laptop*/
 }
 
 

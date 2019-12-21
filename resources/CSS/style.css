@@ -25,19 +25,80 @@ html {
     margin: 0 auto;
 }
 
+section {
+    padding: 80px 0; /*planning to have background color so have to use padding instead of margin*/
+}
+
+.box {
+    padding: 1%;
+}
 /*---------------------------------------------------------------------------*/
 /*HEADING*/
 /*---------------------------------------------------------------------------*/
+
+h1, 
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 h1 {
     margin-top: 0; /*to reduce the margin of h1*/
     margin-bottom: 20px;
     color: #ffffffd0;
     font-size: 240%; /*means our heading element will be 40px which is exactly 200% of 40px, so when we change the font-size in the global(html), this will be flexible.*/
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 4px;
+    word-spacing: 4px; /*control the space between the word "Hello    world, Hello world"*/
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {  /*:after pseudo class, some stuff appeared after h2 in this case*/
+    display: block;
+    height: 2px;
+    background-color: #fd9644;
+    /*it's very important whenever we do :after pseudo class, we have to specify content*/
+    content: " ";  /*In this case, wedont'want any word here, so we put space.*/
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/*---------------------------------------------------------------------------*/
+/*PARAGRAPH*/
+/*---------------------------------------------------------------------------*/
+
+.longCopy {
+    line-height: 145%; /*see in typography lecture*/
+    width: 70%;  /*make the width of the paragraph to do not be so long*/ 
+    margin-left: 15%; /*margin in both side left from the width in total is 30%, so we devided half and half to make the text center*/
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%; /*control the line height between the line*/
+}
+
+/*---------------------------------------------------------------------------*/
+/*ICONS*/
+/*---------------------------------------------------------------------------*/
+
+.showIcon {
+    font-size: 250%;  /*ionicons is font icon so we can adjust as a font*/
+    display: block;  /*force the line break*/
+    color: #fd9644;
+    margin-bottom: 10px;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -106,10 +167,15 @@ header {
     height: 100px;
     width: auto;
     float: left;
+    margin-top: 5px;
 }
 
+/*---------------------------------------------------------------------------*/
+/*MAIN NAVIGATION*/
+/*---------------------------------------------------------------------------*/
+
 .mainNav {
-    margin-top: 30px;
+    margin-top: 35px;
     float: right;
     list-style: none;
 }
