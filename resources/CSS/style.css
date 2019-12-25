@@ -16,6 +16,15 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1;}  /*Use the class to clear the float after element*/
+.clearfix::after { /*put clearfix class to the ul element because the child elements of ul class, which are li elements are the one who has the float property. So, we put clearfix class to the parent then that floatwill be clear*/
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /*---------------------------------------------------------------------------*/
 /*REUSABLE COMPONENTS*/
 /*---------------------------------------------------------------------------*/
@@ -199,4 +208,102 @@ header {
 .mainNav li a:hover,
 .mainNav li a:active {
     border-bottom: 2px solid #fd9644;
+}
+
+/*---------------------------------------------------------------------------*/
+/*FEATURES*/
+/*---------------------------------------------------------------------------*/
+
+.sectionFeatures .longCopy {
+    margin-bottom: 30px;
+}
+
+/*---------------------------------------------------------------------------*/
+/*MEALS*/
+/*---------------------------------------------------------------------------*/
+
+.sectionMeal {
+    padding: 0;
+}
+
+.mealsShowcase {
+    list-style: none; /*delete bullet point*/
+    width: 100%;
+}
+
+.mealsShowcase li {
+    display: block;
+    float: left;
+    width: 25%;  /*with 100% full width in .mealShowcase, we want four images be in the same line so we have to define equally*/
+}
+
+.mealPhoto {
+    width: 100%; /*it has exact width with its parent which is .mealShowcase li*/
+    margin: 0; /*according to normalize.css defines some margin so we have to define it here too*/
+    overflow: hidden; /*force the image to be not bigger than its container*/
+    background-color: black;
+}
+
+.mealPhoto img {
+    opacity: 0.7; /*Opacity is up to background color. If we want black, we have to set bg of image to black*/
+    width: 100%;  /*assure exactly that the images is as wide as its container*/
+    height: auto;
+    transform: scale(1.15); /*Instead of 100%, the photo will be 115% big*/
+    transition: transform 0.5s, opacity 0.5s; /*timing of transform element*/
+}
+
+.mealPhoto img:hover {  /*We can usehover for every elements. It doesn't work only for link.*/
+    opacity: 1;
+    transform: scale(1.03);  /*back to normal, in actually normal is 1 (100%) but there is small space in the image containerso we fix it using scale 1.03*/
+}
+
+/*---------------------------------------------------------------------------*/
+/*HOW IT WORKS*/
+/*---------------------------------------------------------------------------*/
+
+.sectionSteps {
+    background-color: #f0f0f0;
+}
+
+.stepsBox:first-child { /*:first-child will select the first of these stepsBox, see more useful selector in Jonas's site*/
+    text-align: right; /*can work with all inline block element*/
+    padding-right: 3%; /*useful for responsive web design to be fluid*/  
+    margin-top: 30px; /*divide from 100*/
+}
+
+.stepsBox:last-child {
+    padding-left: 3%;
+    margin-top: 70px; /*divide from 100*/
+}
+
+.appScreen {
+    width: 40%;
+}
+
+.workStep {
+    margin-bottom: 50px;
+}
+
+.workStep:last-of-type {  /*select the last element in workStep*/
+    margin-bottom: 80px;    
+}
+
+.workStep div {
+    color: #fd9644;
+    border: 2px solid #fd9644;
+    display: inline-block; /*the element doesn't force a line break and the number can be side by side of the text*/
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btnApp img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }

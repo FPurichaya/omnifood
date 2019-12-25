@@ -8,8 +8,8 @@
     <link rel="stylesheet" type="text/css" href="resources/CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <title>OmniFood</title>
-
 </head>
+
 
 <body>
     <header>
@@ -35,6 +35,7 @@
         </div>
     </header>
 
+
     <section class="sectionFeatures">
         <div class="row">
             <!--use class "row" because we want it to be centered-->
@@ -45,35 +46,118 @@
                 cooking. So let us take care of that, we’re really good at it, we promise!
             </p>
         </div>
-        <div class="col span-1-of-4 box">
-            <!--use col class and span-1-of-4 according to theset up in Grid.css-->
-            <i class="ion-ios-infinite showIcon"></i>   <!--icon-->
-            <h3>Up to 365 days/year</h3>
-            <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You
-                can also choose to order more flexibly if that's your style.</p>
+        <div class="row">
+            <div class="col span-1-of-4 box">
+                <!--use col class and span-1-of-4 according to theset up in Grid.css-->
+                <i class="ion-ios-infinite showIcon"></i>
+                <!--icon-->
+                <h3>Up to 365 days/year</h3>
+                <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage.
+                    You
+                    can also choose to order more flexibly if that's your style.</p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-time showIcon"></i>
+                <h3>Ready in 20 minutes</h3>
+                <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your
+                    home.
+                    We work with the best chefs in each town to ensure that you're 100% happy.</p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-leaf showIcon"></i>
+                <h3>100% organic</h3>
+                <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or
+                    antibiotics. Good for your health, the environment, and it also tastes better!</p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-android-cart showIcon"></i>
+                <h3>Order anything</h3>
+                <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose
+                    from our menu containing over 100 delicious meals. It's up to you!</p>
+            </div>
         </div>
-        <div class="col span-1-of-4 box">
-            <i class="ion-ios-time showIcon"></i>
-            <h3>Ready in 20 minutes</h3>
-            <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home.
-                We work with the best chefs in each town to ensure that you're 100% happy.</p>
-        </div>
-        <div class="col span-1-of-4 box">
-            <i class="ion-leaf showIcon"></i>
-            <h3>100% organic</h3>
-            <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or
-                antibiotics. Good for your health, the environment, and it also tastes better!</p>
-        </div>
-        <div class="col span-1-of-4 box">
-            <i class="ion-android-cart showIcon"></i>
-            <h3>Order anything</h3>
-            <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose
-                from our menu containing over 100 delicious meals. It's up to you!</p>
-        </div>
-
-
     </section>
 
+
+    <section class="sectionMeal">
+        <!--Don't use .row here because don't want images to be centered. Instead, we want images to occupy 100% of browser's width so we use "unordered list" for each line-->
+
+        <ul class="mealsShowcase clearfix">
+            <li>
+                <figure class="mealPhoto">
+                    <!--also like a container which can contain an image and caption for an image. There's element called <figcaption> to use to put caption in-->
+                    <img src="resources/images/1.jpg" alt="Korean bibimbap with egg and vegetables">
+                </figure>
+            </li>
+            <li>
+                <figure class="mealPhoto">
+                    <img src="resources/images/2.jpg" alt="Simple Italian pizza with cherry tomatoes">
+                </figure>
+            </li>
+            <li>
+                <figure class="mealPhoto">
+                    <img src="resources/images/3.jpg" alt="Chicken breast steak with vegetables">
+                </figure>
+            </li>
+            <li>
+                <figure class="mealPhoto">
+                    <img src="resources/images/4.jpg" alt="Autumn pumpkin soup">
+                </figure>
+            </li>
+        </ul>
+
+        <ul class="mealsShowcase clearfix">
+            <li>
+                <figure class="mealPhoto">
+                    <img src="resources/images/5.jpg" alt="Paleo beef steak with vegetables">
+                </figure>
+            </li>
+            <li>
+                <figure class="mealPhoto">
+                    <img src="resources/images/6.jpg" alt="Healthy baguette with egg and vegetables">
+                </figure>
+            </li>
+            <li>
+                <figure class="mealPhoto">
+                    <img src="resources/images/7.jpg" alt="Burger with cheddar and bacon">
+                </figure>
+            </li>
+            <li>
+                <figure class="mealPhoto">
+                    <img src="resources/images/8.jpg" alt="Granola with cherries and strawberries">
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <section class="sectionSteps">
+        <div class="row">
+            <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+        </div>
+        <!--This time we need two column to seperate iphone photo and steps-->
+        <div class="row">
+            <div class="col span-1-of-2 stepsBox"> <!--To seperate the column-->
+                <img src="resources/images/app-iPhone.png" alt="Omnifood app on iPhone" class="appScreen">
+            </div>
+            <div class="col span-1-of-2 stepsBox">
+                <div class="workStep">
+                    <div>1</div>
+                    <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                </div>
+                <div class="workStep">
+                    <div>2</div>
+                    <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                </div>
+                <div class="workStep">
+                    <div>3</div>
+                    <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+                </div>
+                <!--APP BUTTONS LINK-->
+                <a href="#" class="btnApp"><img src="resources/images/download-app.svg" alt="App Store button"></a>
+                <a href="#" class="btnApp"><img src="resources/images/download-app-android.png" alt="Play Store button"></a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
