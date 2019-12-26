@@ -110,6 +110,39 @@ h2:after {  /*:after pseudo class, some stuff appeared after h2 in this case*/
     margin-bottom: 10px;
 }
 
+.citesIcon {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #fd9644;
+    font-size: 120%;
+    margin-right: 10px;
+
+    /*secret to align text and icon*/
+    line-height: 120%;  
+    vertical-align: middle;   
+    margin-top: -5px; /*margin gives space, negative margin takes space away*/
+}
+
+/*---------------------------------------------------------------------------*/
+/*LINKS*/
+/*---------------------------------------------------------------------------*/
+
+a:link,
+a:visited{
+    color: #fd9644;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #fd9644;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #707070;
+    border-bottom: 1px solid transparent;
+}
+
 /*---------------------------------------------------------------------------*/
 /*BUTTON*/
 /*---------------------------------------------------------------------------*/
@@ -302,8 +335,28 @@ header {
     margin-right: 25px;
 }
 
+.btnApp:link,
+.btnApp:visited {
+    border: 0;
+}
+
 .btnApp img {
     height: 50px;
     width: auto;
     margin-right: 10px;
 }
+
+/*---------------------------------------------------------------------------*/
+/*CITIES*/
+/*---------------------------------------------------------------------------*/
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.citiesFeature {
+    margin-bottom: 5px;
+}
+
