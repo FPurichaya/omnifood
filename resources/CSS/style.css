@@ -10,7 +10,7 @@
 html {
     background-color: #ffffff;
     color: #707070;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
@@ -110,6 +110,39 @@ h2:after {  /*:after pseudo class, some stuff appeared after h2 in this case*/
     margin-bottom: 10px;
 }
 
+.citiesIcon {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #fd9644;
+    font-size: 120%;
+    margin-right: 10px;
+
+    /*secret to align text and icon*/
+    line-height: 120%;  
+    vertical-align: middle;   
+    margin-top: -5px; /*margin gives space, negative margin takes space away*/
+}
+
+/*---------------------------------------------------------------------------*/
+/*LINKS*/
+/*---------------------------------------------------------------------------*/
+
+a:link,
+a:visited{
+    color: #fd9644;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #fd9644;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #707070;
+    border-bottom: 1px solid transparent;
+}
+
 /*---------------------------------------------------------------------------*/
 /*BUTTON*/
 /*---------------------------------------------------------------------------*/
@@ -162,6 +195,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh; /*100% of viewport*/
+    background-attachment: fixed;
 }
 
 .heroTextBox {
@@ -302,8 +336,57 @@ header {
     margin-right: 25px;
 }
 
+.btnApp:link,
+.btnApp:visited {
+    border: 0;
+}
+
 .btnApp img {
     height: 50px;
     width: auto;
+    margin-right: 10px;
+}
+
+/*---------------------------------------------------------------------------*/
+/*CITIES*/
+/*---------------------------------------------------------------------------*/
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.citiesFeature {
+    margin-bottom: 5px;
+}
+
+/*---------------------------------------------------------------------------*/
+/*TESTIMONIALS*/
+/*---------------------------------------------------------------------------*/
+
+.sectionTestimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.26), #000), url(CSSimg/back-customers.jpg);
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+    
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
     margin-right: 10px;
 }
