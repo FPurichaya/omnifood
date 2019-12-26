@@ -10,7 +10,7 @@
 html {
     background-color: #ffffff;
     color: #707070;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
@@ -110,7 +110,7 @@ h2:after {  /*:after pseudo class, some stuff appeared after h2 in this case*/
     margin-bottom: 10px;
 }
 
-.citesIcon {
+.citiesIcon {
     display: inline-block;
     width: 30px;
     text-align: center;
@@ -195,6 +195,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh; /*100% of viewport*/
+    background-attachment: fixed;
 }
 
 .heroTextBox {
@@ -360,3 +361,32 @@ header {
     margin-bottom: 5px;
 }
 
+/*---------------------------------------------------------------------------*/
+/*TESTIMONIALS*/
+/*---------------------------------------------------------------------------*/
+
+.sectionTestimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.26), #000), url(CSSimg/back-customers.jpg);
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+    
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
